@@ -123,16 +123,16 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
+
+  transition-property: color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
 }
 
 .site-nav .link:hover,
 .site-nav .link:focus,
 .site-nav .link.current {
   color: var(--accent-color);
-
-  transition-property: color;
-  transition-duration: var(--duration);
-  transition-timing-function: var(--timing-function);
 }
 
 .link.current::after {
@@ -171,10 +171,6 @@ img {
 .nav-contact:hover,
 .nav-contact:focus {
   color: var(--accent-color);
-
-  transition-property: color;
-  transition-duration: var(--duration);
-  transition-timing-function: var(--timing-function);
 }
 
 .hero {
@@ -313,28 +309,28 @@ img {
 
   background-color: transparent;
   border-radius: 50%;
-}
-
-.social-icon {
-  fill: var(--icon-color);
-}
-
-.social-link:hover,
-.social-link:focus {
-  background-color: var(--accent-color);
 
   transition-property: background-color;
   transition-duration: var(--duration);
   transition-timing-function: var(--timing-function);
 }
 
-.social-link:hover .social-icon,
-.social-link:focus .social-icon {
-  fill: var(--primary-white);
+.social-icon {
+  fill: var(--icon-color);
 
   transition-property: fill;
   transition-duration: var(--duration);
   transition-timing-function: var(--timing-function);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: var(--primary-white);
 }
 
 .team {
@@ -402,16 +398,16 @@ img {
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   fill: var(--icon-color);
+
+  transition-property: fill, border;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
 }
 
 .client-link:hover,
 .client-link:focus {
   border: 1px solid var(--accent-color);
   fill: var(--accent-color);
-
-  transition-property: fill, border;
-  transition-duration: var(--duration);
-  transition-timing-function: var(--timing-function);
 }
 
 .bottom {
@@ -428,15 +424,15 @@ img {
 
 .bottom .social-icon {
   fill: var(--primary-white);
+
+  transition-property: background-color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
 }
 
 .bottom .social-link:hover,
 .bottom .social-link:focus {
   background-color: var(--accent-color);
-
-  transition-property: background-color;
-  transition-duration: var(--duration);
-  transition-timing-function: var(--timing-function);
 }
 
 .footer-logo {
@@ -463,15 +459,15 @@ img {
 
 .footer-contact {
   color: var(--semi-transparent-white);
+
+  transition-property: color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
 }
 
 .footer-contact:hover,
 .footer-contact:focus {
   color: var(--accent-color);
-
-  transition-property: color;
-  transition-duration: var(--duration);
-  transition-timing-function: var(--timing-function);
 }
 
 .footer-title {
@@ -524,6 +520,10 @@ img {
   background-color: var(--secondary-white);
   border-style: none;
   border-radius: 4px;
+
+  transition-property: color, background-color, box-shadow, border-radius;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
 }
 
 .filter:hover,
@@ -534,10 +534,6 @@ img {
   box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08),
     0 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-
-  transition-property: color, background-color, box-shadow, border-radius;
-  transition-duration: var(--duration);
-  transition-timing-function: var(--timing-function);
 }
 
 .projects {
@@ -546,15 +542,17 @@ img {
   gap: 30px;
 }
 
+.project-element {
+  transition-property: box-shadow;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
+}
+
 .project-element:hover,
 .project-element:focus {
   display: inline-block;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-
-  transition-property: box-shadow;
-  transition-duration: var(--duration);
-  transition-timing-function: var(--timing-function);
 }
 
 .projects .name {
